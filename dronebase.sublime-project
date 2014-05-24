@@ -1,0 +1,18 @@
+{
+    "build_systems":
+    [
+        {
+            "name": "#",
+            "working_dir": "$project_path",
+            "cmd": "do.bat deploy"
+        }
+    ],
+
+	"folders":
+	[
+		{
+			"name": "dronebase",
+			"path": "/"
+		}
+	]
+}

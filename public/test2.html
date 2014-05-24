@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Operation Profit</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <style>
+
+        @font-face {
+            font-family: 'purista';
+            src: url('fonts/PuristaMedium.woff') format('woff'),
+                 url('fonts/PuristaMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main {
+            margin: 0 auto;
+            width: 1024px;
+        }
+
+        #menu {
+            /*background: #CCFFFF;*/
+            position: fixed;
+            width: 192px;
+            padding-top: 32px;
+        }
+
+        #menu > a {
+            width: 192px;
+            height: 96px;
+            background-image: url('art/logo.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            display: block;
+            overflow: hidden;
+            text-indent: -123456px;
+        }
+
+        #menu > ul {
+            list-style: none;
+            padding: 0 0 0 20px;
+        }
+
+        #menu > ul > li {
+        }
+
+        #menu > ul > li > a {
+            display: block;
+            font-family: purista, sans-serif, helvetica;
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        #content {
+            /*background: #FFCCFF;*/
+            float: left;
+            width: 832px;
+            padding-left: 192px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <aside id="menu">
+            <a id="logo" href="#">Operation Profit</a>
+            <ul>
+                <li><a href="#">MULTIPLE</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">ITEMS</a></li>
+                <li><a href="#">AND</a></li>
+                <li><a href="#">OTHER</a></li>
+                <li><a href="#">SHIT</a></li>
+            </ul>
+        </aside>
+        <div id="content">text</div>
+    </div>
+</body>
+
+</html>
