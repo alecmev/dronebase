@@ -8,7 +8,7 @@ relying on bloated, over-complicated and often bugged third-party plugins.
 
 ### Example
 
-```
+```node
 var drone = require('./dronebase.js').launch({
   "host": "example.com",
   "port": 47200,
