@@ -6,6 +6,12 @@ wishing to spare themselves all the pain associated with Procon, with no
 compromises, other than, well, having to code the rules yourself, instead of
 relying on bloated, over-complicated and often bugged third-party plugins.
 
+### Usage
+
+Run `npm install` to install dependencies. Use `dronebase.js` as documentation,
+read comments above `Drone`, `on`, `off` and `request`. Pardon for being so
+spartan about this.
+
 ### Example
 
 ```node
@@ -29,11 +35,6 @@ drone.on('player.onKill', function(words) {
 See `example.js` for more. It's a real script used in [21st Century
 Warfare](https://21cwforums.com/forum.php) for automatic administration of
 organized 32v32 battles.
-
-### Usage
-
-See `dronebase.js`, read comments above `Drone`, `on`, `off` and `request`.
-Pardon for being so spartan about this.
 
 ### Story
 
