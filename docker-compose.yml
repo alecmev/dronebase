@@ -1,0 +1,10 @@
+app:
+  image: node
+  working_dir: /app
+  volumes:
+    - .:/app
+  links:
+    - mongo
+
+mongo:
+  image: mongo
