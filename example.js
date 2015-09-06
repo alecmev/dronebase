@@ -46,7 +46,9 @@ var allowedChat = [
   'havefungoodluck',
 
   'gr',
+  'grs',
   'goodround',
+  'goodrounds',
 
   'gh',
   'goodhalf',
@@ -60,6 +62,7 @@ var allowedChat = [
   'ggg',
   'ggs',
   'goodgame',
+  'goodgames',
 
   'wp',
   'wellplayed',
@@ -83,7 +86,6 @@ var ALLCHAT_MEMORY = 1; // days
 
 var weaponBans = {
   'AC130_Gunship': 'AC-130 GUNSHIP',
-  'XP1/Gameplay/Gadgets/UCAV/UCAV_Launcher': 'UCAV',
 };
 
 var drone = dronebase.prepare(droneTarget);
@@ -173,7 +175,7 @@ function say(what, target) {
 
 function yell(what, target, duration) {
   winston.warn('yell', what);
-  var command = ['admin.yell', what, duration ? duration : 5];
+  var command = ['admin.yell', what, duration || 5];
   if (target) {
     command = command.concat(['player', target]);
   } else {
@@ -212,6 +214,7 @@ drone.on('down', function() {
 });
 
 var live = process.argv.indexOf('--live') !== -1;
+var tagCheckNeeded = process.argv.indexOf('--tags') !== -1;
 var tellLiveTimeout = false;
 
 function tellLive() {
@@ -222,7 +225,7 @@ function tellLive() {
     say(phrase);
   }
 
-  if (live) {
+  if (live && tagCheckNeeded) {
     checkTags();
   }
 }

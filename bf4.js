@@ -5,6 +5,7 @@ module.exports.expansionsNumeric = {
   2097152: 'Naval Strike',
   4194304: 'Dragon\'s Teeth',
   8388608: 'Final Stand',
+  268435456: 'Night Operations',
 };
 
 module.exports.modesNumeric = {
@@ -201,5 +202,10 @@ module.exports.maps = {
     'expansion': 8388608,
     'modes': [1, 2, 8, 32, 64, 1024, 524288, 2097152, 16777216, 137438953472],
     'name': 'Giants of Karelia',
-  }
+  },
+  'XP5_Night_01': {
+    'expansion': 268435456,
+    'modes': [1, 2, 32, 64, 512, 1024, 2097152, 137438953472],
+    'name': 'Zavod: Graveyard Shift',
+  },
 };
