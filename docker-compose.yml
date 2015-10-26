@@ -3,8 +3,3 @@ app:
   working_dir: /app
   volumes:
     - .:/app
-  links:
-    - mongo
-
-mongo:
-  image: mongo

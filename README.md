@@ -8,33 +8,11 @@ relying on bloated, over-complicated and often bugged third-party plugins.
 
 ### Usage
 
-Run `npm install` to install dependencies. Use `dronebase.js` as documentation,
-read comments above `Drone`, `on`, `off` and `request`. Pardon for being so
-spartan about this.
+`TODO`
 
 ### Example
 
-```node
-var drone = require('./dronebase.js').launch({
-  "host": "example.com",
-  "port": 47200,
-  "password": "password"
-});
-
-drone.on('player.onChat', function(words) {
-  if ('ping' == words[1]) {
-    drone.request(['admin.say', 'pong', 'player', words[0]]);
-  }
-});
-
-drone.on('player.onKill', function(words) {
-  drone.request(['admin.say', 'ded :(', 'player', words[1]]);
-});
-```
-
-See `example.js` for more. It's a real script used in [21st Century
-Warfare](https://21cwforums.com/forum.php) for automatic administration of
-organized 32v32 battles.
+`TODO`
 
 ### Story
 
