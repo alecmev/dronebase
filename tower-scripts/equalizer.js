@@ -1,6 +1,6 @@
-// Allowed difference between the two teams, above which hard-kick activates
+// Allowed difference between the two teams, above which equalizer activates
 const DIFF_THRESHOLD = 3;
-// Give teams this much time in seconds to kick someone, otherwise hard-kick
+// Give teams this much time in seconds to kick someone, otherwise equalizer
 // terminates the last loaded player on the bigger team
 const GRACE_PERIOD = 120;
 // Access token for executing server commands
@@ -184,7 +184,7 @@ export default function hardKick(listPlayers, exec, teamSetupFeed, joinLeaveFeed
 
   // Business logic
 
-  // Prevent hard-kick from activating on every status update
+  // Prevent equalizer from activating on every status update
   const state = {
     active: false,
   };
@@ -219,7 +219,7 @@ export default function hardKick(listPlayers, exec, teamSetupFeed, joinLeaveFeed
           state.active = true;
 
           // Warn teams
-          await _exec('say', [ WARNING_TEXT ]);
+          _exec('say', [ WARNING_TEXT ]);
 
           // Wait out the grace period
           await pause(GRACE_PERIOD * 1000);
@@ -233,8 +233,8 @@ export default function hardKick(listPlayers, exec, teamSetupFeed, joinLeaveFeed
             const biggerTeam = playerQueue.getLongerQueue(meta.id);
             const { name } = playerQueue.pop(meta.id, biggerTeam);
 
-            await _exec('say', [ `Kicking ${name} to balance teams` ]);
-            await _exec('kick', [ name, REASON ]);
+            _exec('say', [ `Kicking ${name} to balance teams` ]);
+            _exec('kick', [ name, REASON ]);
           }
 
           // Update diff... again
