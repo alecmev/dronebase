@@ -10,7 +10,8 @@ const MESSAGE_NL = 'NOT Live';
 export default function setLive(exec, setMeta, commandFeed) {
   commandFeed
     .filter(({ commandObj }) => {
-      return admins[commandObj.issuer].includes('official');
+      return admins[commandObj.issuer] &&
+        admins[commandObj.issuer].includes('official');
     })
     .subscribe(async ({ meta, commandObj }) => {
       const _exec = exec.bind(null, TOKEN, [ meta.id ]);
