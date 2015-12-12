@@ -10,7 +10,12 @@ const MESSAGE_NL = 'NOT Live';
 export default function setLive(exec, setMeta, commandFeed) {
   commandFeed
     .filter(({ commandObj }) => {
+<<<<<<< HEAD
       return admins[commandObj.issuer].includes('official');
+=======
+      return admins[commandObj.issuer] &&
+        admins[commandObj.issuer].includes('official');
+>>>>>>> tower-dev
     })
     .subscribe(async ({ meta, commandObj }) => {
       const _exec = exec.bind(null, TOKEN, [ meta.id ]);

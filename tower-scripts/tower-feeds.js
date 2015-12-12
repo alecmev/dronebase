@@ -154,6 +154,20 @@ export default async function getFeeds() {
       };
     });
 
+<<<<<<< HEAD
+=======
+  const roundOverPlayers = eventFilter(allEvents, 'server.onRoundOverPlayers')
+    .map(({ event, meta, words }) => {
+      return {
+        event,
+        meta,
+        roundOverObj: {
+          players: Tower.playerListFromWords(words),
+        },
+      };
+    });
+
+>>>>>>> tower-dev
   return {
     tower,
     feeds: {
@@ -161,6 +175,10 @@ export default async function getFeeds() {
       commands,
       joinLeave,
       kills,
+<<<<<<< HEAD
+=======
+      roundOverPlayers,
+>>>>>>> tower-dev
       status,
       teamSetup,
       all: allEvents,
